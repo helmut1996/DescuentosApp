@@ -10,12 +10,17 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.example.descuentosapp.ui.theme.DescuentosAppTheme
 import com.example.descuentosapp.view.HomeView
+import com.example.descuentosapp.view.HomeView2
+import com.example.descuentosapp.view.HomeView3
 import com.example.descuentosapp.viewmodel.CalcularViewModel1
+import com.example.descuentosapp.viewmodel.CalcularViewModel2
+import com.example.descuentosapp.viewmodel.CalcularViewModel3
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val viewModel1:CalcularViewModel1 by viewModels()
+        val viewModel: CalcularViewModel3 by viewModels()
         setContent {
             DescuentosAppTheme {
                 // A surface container using the 'background' color from the theme
@@ -23,7 +28,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    HomeView(viewModel1)
+                    HomeView3(viewModel)
                 }
             }
         }
